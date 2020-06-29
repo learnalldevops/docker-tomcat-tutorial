@@ -7,7 +7,7 @@
 #EXPOSE 8080
 #CMD ["catalina.sh", "run"]
 
-FROM jenkins/jenkins:lts
+FROM jenkinsci/blueocean
 LABEL MAINTAINER="Jyoti"
 USER root
 WORKDIR /opt
