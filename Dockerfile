@@ -11,7 +11,7 @@ FROM jenkinsci/blueocean
 LABEL MAINTAINER="Jyoti"
 USER root
 WORKDIR /opt
-RUN apt-get update -y && \
+RUN apt update -y && \
   curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
  apt install nodejs
 RUN wget https://downloads.apache.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
