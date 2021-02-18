@@ -16,7 +16,7 @@ spec:
         app: myweb
     spec:
       containers:
-      - image: iimohii/tomscats
+      - image: iimohii/mytomscats
         imagePullPolicy: Always
         name: myweb
 
