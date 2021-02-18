@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    registry = "iimohii/justme/myweb"
+    registry = "iimohii/mytomscats"
     registryCredential = 'DockerHub'
     dockerImage = ""
   }
@@ -12,7 +12,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git 'https://github.com/learnalldevops/playjenkins.git'
+        git 'https://github.com/learnalldevops/docker-tomcat-tutorial.git'
       }
     }
 
