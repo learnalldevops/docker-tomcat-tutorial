@@ -1,5 +1,5 @@
 FROM tomcat:8.0-alpine
-LABEL maintainer="Jyoti"
+LABEL maintainer="Mohini"
 USER root
 COPY tomcat-users.xml /usr/local/tomcat/conf/
 COPY sample.war /usr/local/tomcat/webapps/
@@ -8,7 +8,7 @@ EXPOSE 8080
 CMD ["catalina.sh", "run"]
 
 #FROM jenkins/jenkins:lts
-#LABEL MAINTAINER="Jyoti"
+#LABEL MAINTAINER="Mohini"
 #USER root
 #WORKDIR /opt
 #RUN apt-get update -y && \
