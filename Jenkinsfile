@@ -27,8 +27,9 @@ pipeline {
     stage('Push Image') {
       steps{
         script {
-          docker.withRegistry( "" ) {
-            dockerImage.push()
+                           withDockerRegistry([ credentialsId: "DockerHub", url: "" ]) {
+                           sh 'docker push iimohii/mytomscats:latest'
+
           }
         }
       }
