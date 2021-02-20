@@ -19,7 +19,7 @@ pipeline {
     stage('Build image') {
       steps{
         script {
-          dockerImage = docker.build registry + ":$BUILD_NUMBER"
+          dockerImage = docker.build("iimohii/mytomscats")
         }
       }
     }
@@ -28,7 +28,7 @@ pipeline {
       steps{
         script {
                            withDockerRegistry([ credentialsId: "DockerHub", url: "" ]) {
-                           sh 'docker push iimohii/mytomscats'
+                           sh 'docker push iimohii/mytomscats:latest'
 
           }
         }
