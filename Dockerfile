@@ -4,7 +4,7 @@ USER root
 COPY tomcat-users.xml /usr/local/tomcat/conf/
 COPY sample.war /usr/local/tomcat/webapps/
 
-EXPOSE 8080
+EXPOSE 8888
 CMD ["catalina.sh", "run"]
 
 #FROM jenkins/jenkins:lts
